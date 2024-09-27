@@ -2,7 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Employee Data</title>
+    <style>
+        /* General styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+        }
+
+        /* Styling for the table */
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            width: 60%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for table caption */
+        caption {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        /* Styling for table headers */
+        th {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 15px;
+        }
+
+        /* Styling for table rows */
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        /* Styling for table cells */
+        td {
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        /* Styling for links in table actions */
+        a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #007BFF;
+            padding: 5px 10px;
+            border: 1px solid #007BFF;
+            border-radius: 4px;
+        }
+
+        a:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        /* Styling for the insertion link */
+        a[href="/in"] {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            display: inline-block;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+        }
+
+        a[href="/in"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <table border="2px" width="50%">
@@ -21,13 +105,13 @@
                  <td>{{ rec.sal }}</td>
                  <td>{{ rec.dno }}</td>
                  <td>
-                     <a href="/edit/{{rec.id}}">Update</span></a> &emsp;
+                     <a href="/edit/{{rec.id}}">Update</a> &emsp;
                      <a href="/delete/{{rec.id}}">Delete</a>
                  </td>
              </tr>
         {% endfor %}
     </table>
-<br>
-<a href="/in">Click here to insert another employee data</a>
+    <br>
+    <a href="/in">Click here to insert another employee data</a>
 </body>
 </html>
