@@ -2,22 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Edit Employee Form</title>
+    <style>
+        /* General styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+        }
+
+        /* Centering and styling the fieldset */
+        fieldset {
+            margin: 0 auto;
+            padding: 20px;
+            width: 40%;
+            background-color: #ffffff;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for the legend */
+        legend {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+            padding: 5px 10px;
+        }
+
+        /* Styling for form labels and inputs */
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Styling for the submit button */
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        /* Hover effect for the submit button */
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Spacing between form elements */
+        br {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <fieldset>
-        <legend>edit form</legend>
+        <legend>Edit Employee Form</legend>
         <form action="/update/{{ employee.id }}">
-           Enter Employee Id:
-           <input type="text" name="id" value="{{ employee.id }}"><br><br>
-           Enter Employee Name:
-           <input type="text" name="name" value="{{ employee.name }}"><br><br>
-           Enter Employee Salaray:
-           <input type="text" name="salary" value="{{ employee.sal }}"><br><br>
-           Enter Employee Department Number:
-           <input type="text" name="dno" value="{{ employee.dno }}"><br><br>
-           <input type="submit" value="update">
-       </form>
+            Enter Employee Id:<br>
+            <input type="text" name="id" value="{{ employee.id }}"><br><br>
+            Enter Employee Name:<br>
+            <input type="text" name="name" value="{{ employee.name }}"><br><br>
+            Enter Employee Salary:<br>
+            <input type="text" name="salary" value="{{ employee.sal }}"><br><br>
+            Enter Employee Department Number:<br>
+            <input type="text" name="dno" value="{{ employee.dno }}"><br><br>
+            <input type="submit" value="Update">
+        </form>
     </fieldset>
 </body>
 </html>
